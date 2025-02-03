@@ -1,5 +1,7 @@
 ![Vercel with Neon](./assets/home.png)
 
+-> View demo: [vercel-marketplace-neon.vercel.app](https://vercel-marketplace-neon.vercel.app/)
+
 # Neon Postgres
 
 A minimal template for building full-stack React applications using Next.js, Vercel, and Neon.
