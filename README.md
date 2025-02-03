@@ -1,3 +1,5 @@
+![Vercel with Neon](./assets/home.png)
+
 # Neon Postgres
 
 A minimal template for building full-stack React applications using Next.js, Vercel, and Neon.
@@ -12,7 +14,7 @@ Install the dependencies:
 npm install
 ```
 
-Use the package manager of your choice. Vercel also supports `bun install` out of the box.
+You can use the package manager of your choice. For example, Vercel also supports `bun install` out of the box.
 
 ### Development
 
@@ -47,9 +49,9 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 To learn more about Neon, check out the Neon documentation:
 
-- [Neon Documentation](https://neon.tech/docs/introduction)
-- [Neon Discord](https://discord.gg/9kf3G4yUZk)
-- [ORM Integrations](https://neon.tech/docs/get-started-with-neon/orms)
+- [Neon Documentation](https://neon.tech/docs/introduction) - learn about Neon's features and SDKs.
+- [Neon Discord](https://discord.gg/9kf3G4yUZk) - join the Neon Discord server to ask questions and join the community.
+- [ORM Integrations](https://neon.tech/docs/get-started-with-neon/orms) - find Object-Relational Mappers (ORMs) that work with Neon.
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -58,4 +60,4 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Deploy on Vercel
 
-Deploy your app to Vercel: [vercel.com/new](https://vercel.com/new)
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fneondatabase-labs%2Fvercel-marketplace-neon%2Ftree%2Fmain&project-name=my-vercel-neon-app&repository-name=my-vercel-neon-app)
