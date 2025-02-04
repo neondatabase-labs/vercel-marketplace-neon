@@ -8,6 +8,14 @@ A minimal template for building full-stack React applications using Next.js, Ver
 
 ## Getting Started
 
+Click the "Deploy" button to clone this repo, create a new Vercel project, setup the Neon integration, and provision a new Neon database:
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fneondatabase-labs%2Fvercel-marketplace-neon%2Ftree%2Fmain&project-name=my-vercel-neon-app&repository-name=my-vercel-neon-app&products=[{%22type%22:%22integration%22,%22integrationSlug%22:%22neon%22,%22productSlug%22:%22neon%22,%22protocol%22:%22storage%22}])
+
+Once the process is complete, you can clone the newly created GitHub repository and start making changes locally.
+
+## Local Setup
+
 ### Installation
 
 Install the dependencies:
@@ -28,9 +36,11 @@ cp .env.example .env
 
 #### Get your database URL
 
-Obtain a connection string for your database from the Connection Details widget on the [Neon Dashboard](https://pg.new).
+Obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://pg.new).
 
-#### Add your database URL to the .env file
+#### Add the database URL to the .env file
+
+Update the `.env` file with your database connection string:
 
 ```txt
 # The connection string has the format `postgres://user:pass@host/db`
@@ -62,5 +72,9 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Deploy on Vercel
 
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fneondatabase-labs%2Fvercel-marketplace-neon%2Ftree%2Fmain&project-name=my-vercel-neon-app&repository-name=my-vercel-neon-app&products=[{%22type%22:%22integration%22,%22integrationSlug%22:%22neon%22,%22productSlug%22:%22neon%22,%22protocol%22:%22storage%22}])
+Commit and push your code changes to your GitHub repository to automatically trigger a new deployment.
+
+
+
+
 
