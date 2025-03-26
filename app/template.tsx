@@ -56,21 +56,21 @@ function Logo() {
 export default function Template() {
   return (
     <div className="flex min-h-screen flex-col">
-      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col sm:max-w-md sm:px-5 md:max-w-lg">
+      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col md:max-w-lg sm:max-w-md sm:px-5">
         <main className="flex flex-1 flex-col justify-center">
           <div className="mb-7 sm:mb-6">
             <Logo />
           </div>
           {/* <PostgresVersion /> */}
           <h1
-            className="text-[52px] font-semibold leading-[1.125] tracking-[-0.04em] sm:text-[32px] md:text-[44px] sm:[&_br]:hidden"
+            className="text-[52px] font-semibold leading-[1.125] tracking-[-0.04em] md:text-[44px] sm:text-[32px] sm:[&_br]:hidden"
             dangerouslySetInnerHTML={{ __html: DATA.title }}
           />
           <p
-            className="mt-3.5 max-w-lg text-xl leading-snug tracking-[-0.02em] text-[#61646B] sm:text-[16px] md:text-[18px] dark:text-[#94979E] sm:[&_br]:hidden"
+            className="mt-3.5 max-w-lg text-xl leading-snug tracking-[-0.02em] text-[#61646B] md:text-[18px] sm:text-[16px] dark:text-[#94979E] sm:[&_br]:hidden"
             dangerouslySetInnerHTML={{ __html: DATA.description }}
           />
-          <div className="mt-10 flex flex-wrap items-center gap-5 sm:mt-8 md:mt-9">
+          <div className="mt-10 flex flex-wrap items-center gap-5 md:mt-9 sm:mt-8">
             <Link
               className="rounded-full bg-[#00E599] px-7 py-3 font-semibold tracking-[-0.04em] text-[#0C0D0D] transition-colors duration-200 hover:bg-[#00E5BF] md:px-5 md:py-2.5"
               href={DATA.button.href}
