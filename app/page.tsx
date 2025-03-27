@@ -57,7 +57,7 @@ export default function Home() {
             />
           </div>
           <h1
-            className="text-3xl font-semibold leading-tight tracking-tighter md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight"
+            className="text-3xl font-semibold leading-none tracking-tighter md:text-4xl md:leading-none lg:text-5xl lg:leading-none"
             dangerouslySetInnerHTML={{ __html: DATA.title }}
           />
           <p
