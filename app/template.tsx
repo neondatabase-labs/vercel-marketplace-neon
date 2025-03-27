@@ -6,6 +6,7 @@ import Link from "next/link";
 import arrow from "@/assets/template/arrow.svg";
 import discord from "@/assets/template/discord.svg";
 import docs from "@/assets/template/docs.svg";
+import theme from "@/assets/template/theme.svg";
 
 const DATA = {
   title: "Next-Gen Templates<br> with Neon & Vercel",
@@ -33,33 +34,28 @@ const DATA = {
   ],
 };
 
-function Logo() {
-  return (
-    <>
-      <Image
-        className="md:h-6 md:w-auto dark:hidden"
-        src={logo}
-        alt="logo"
-        width={102}
-        height={28}
-      />
-      <Image
-        className="hidden md:h-6 md:w-auto dark:block"
-        src={logoDark}
-        alt="logo"
-        width={102}
-        height={28}
-      />
-    </>
-  );
-}
 export default function Template() {
   return (
     <div className="flex min-h-screen flex-col">
       <div className="mx-auto flex w-full max-w-xl flex-1 flex-col md:max-w-lg sm:max-w-md sm:px-5">
         <main className="flex flex-1 flex-col justify-center">
           <div className="mb-7 sm:mb-6">
-            <Logo />
+            <Image
+              className="md:h-6 md:w-auto dark:hidden"
+              src={logo}
+              alt="logo"
+              width={102}
+              height={28}
+              priority
+            />
+            <Image
+              className="hidden md:h-6 md:w-auto dark:block"
+              src={logoDark}
+              alt="logo"
+              width={102}
+              height={28}
+              priority
+            />
           </div>
           {/* <PostgresVersion /> */}
           <h1
@@ -90,12 +86,23 @@ export default function Template() {
                 alt="arrow"
                 width={16}
                 height={10}
+                priority
               />
             </Link>
           </div>
         </main>
         <footer className="flex items-center justify-between border-t border-[#E4E5E7] pb-12 pt-10 sm:py-5 dark:border-[#303236]">
-          <Logo />
+          <div className="flex w-32 items-center gap-2 rounded border border-[#E4E5E7] px-2.5 py-2 dark:border-[#303236]">
+            <Image
+              className="dark:invert"
+              src={theme}
+              alt="theme"
+              width={16}
+              height={16}
+              priority
+            />
+            <span className="text-[13px] leading-none tracking-[-0.02em]">System</span>
+          </div>
           <div className="flex gap-6">
             {DATA.footerLinks.map((link) => (
               <Link
@@ -110,6 +117,7 @@ export default function Template() {
                   alt={link.text}
                   width={16}
                   height={16}
+                  priority
                 />
                 <span className="text-[15px] tracking-[-0.02em]">{link.text}</span>
               </Link>
