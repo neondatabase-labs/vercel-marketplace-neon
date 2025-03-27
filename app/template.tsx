@@ -1,4 +1,3 @@
-// import PostgresVersion from "./version";
 import Image from "next/image";
 import logo from "@/assets/template/logo.svg";
 import logoDark from "@/assets/template/logo-dark.svg";
@@ -11,7 +10,7 @@ import theme from "@/assets/template/theme.svg";
 const DATA = {
   title: "Next-Gen Templates<br> with Neon & Vercel",
   description:
-    "Pre-built, optimized, and deployment-ready in minutes.<br> Fast-track your app development with Neon and Vercel.",
+    "Pre-built, optimized, and deployment-ready in minutes. Fast&#8209;track your app development with Neon and Vercel.",
   button: {
     text: "Create Neon Database",
     href: "https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fneondatabase-labs%2Fvercel-marketplace-neon%2Ftree%2Fmain&project-name=my-vercel-neon-app&repository-name=my-vercel-neon-app&products=[{%22type%22:%22integration%22,%22integrationSlug%22:%22neon%22,%22productSlug%22:%22neon%22,%22protocol%22:%22storage%22}]",
@@ -37,45 +36,44 @@ const DATA = {
 export default function Template() {
   return (
     <div className="flex min-h-screen flex-col">
-      <div className="mx-auto flex w-full max-w-xl flex-1 flex-col md:max-w-lg sm:max-w-md sm:px-5">
+      <div className="mx-auto flex w-full max-w-md flex-1 flex-col px-5 lg:max-w-xl md:max-w-lg md:px-0">
         <main className="flex flex-1 flex-col justify-center">
-          <div className="mb-7 sm:mb-6">
+          <div className="mb-6 md:mb-7">
             <Image
-              className="md:h-6 md:w-auto dark:hidden"
+              className="lg:h-7 lg:w-auto dark:hidden"
               src={logo}
               alt="logo"
-              width={102}
-              height={28}
+              width={88}
+              height={24}
               priority
             />
             <Image
-              className="hidden md:h-6 md:w-auto dark:block"
+              className="hidden lg:h-7 lg:w-auto dark:block"
               src={logoDark}
               alt="logo"
-              width={102}
-              height={28}
+              width={88}
+              height={24}
               priority
             />
           </div>
-          {/* <PostgresVersion /> */}
           <h1
-            className="text-[52px] font-semibold leading-[1.125] tracking-[-0.04em] md:text-[44px] sm:text-[32px] sm:[&_br]:hidden"
+            className="text-[32px] font-semibold leading-[1.125] tracking-tighter lg:text-[52px] md:text-[44px]"
             dangerouslySetInnerHTML={{ __html: DATA.title }}
           />
           <p
-            className="mt-3.5 max-w-lg text-xl leading-snug tracking-[-0.02em] text-[#61646B] md:text-[18px] sm:text-[16px] dark:text-[#94979E] sm:[&_br]:hidden"
+            className="mt-3.5 max-w-lg text-base !leading-snug tracking-tight text-[#61646B] lg:text-xl md:text-lg dark:text-[#94979E]"
             dangerouslySetInnerHTML={{ __html: DATA.description }}
           />
-          <div className="mt-10 flex flex-wrap items-center gap-5 md:mt-9 sm:mt-8">
+          <div className="mt-8 flex flex-wrap items-center gap-5 lg:mt-10 md:mt-9">
             <Link
-              className="rounded-full bg-[#00E599] px-7 py-3 font-semibold tracking-[-0.04em] text-[#0C0D0D] transition-colors duration-200 hover:bg-[#00E5BF] md:px-5 md:py-2.5"
+              className="rounded-full bg-[#00E599] px-5 py-2.5 font-semibold tracking-tight text-[#0C0D0D] transition-colors duration-200 hover:bg-[#00E5BF] lg:px-7 lg:py-3"
               href={DATA.button.href}
               target="_blank"
             >
               {DATA.button.text}
             </Link>
             <Link
-              className="group flex items-center gap-2 tracking-[-0.03em]"
+              className="group flex items-center gap-2 leading-none tracking-tight"
               href={DATA.link.href}
               target="_blank"
             >
@@ -91,8 +89,8 @@ export default function Template() {
             </Link>
           </div>
         </main>
-        <footer className="flex items-center justify-between border-t border-[#E4E5E7] pb-12 pt-10 sm:py-5 dark:border-[#303236]">
-          <div className="flex w-32 items-center gap-2 rounded border border-[#E4E5E7] px-2.5 py-2 dark:border-[#303236]">
+        <footer className="flex items-center justify-between border-t border-[#E4E5E7] py-5 md:pb-12 md:pt-10 dark:border-[#303236]">
+          <div className="flex items-center gap-2.5 rounded border border-[#E4E5E7] py-2 pl-2.5 pr-3.5 text-sm leading-none tracking-tight dark:border-[#303236]">
             <Image
               className="dark:invert"
               src={theme}
@@ -101,7 +99,8 @@ export default function Template() {
               height={16}
               priority
             />
-            <span className="text-[13px] leading-none tracking-[-0.02em]">System</span>
+            <span className="dark:hidden">Light</span>
+            <span className="hidden dark:block">Dark</span>
           </div>
           <div className="flex gap-6">
             {DATA.footerLinks.map((link) => (
@@ -119,7 +118,7 @@ export default function Template() {
                   height={16}
                   priority
                 />
-                <span className="text-[15px] tracking-[-0.02em]">{link.text}</span>
+                <span className="text-sm tracking-tight">{link.text}</span>
               </Link>
             ))}
           </div>
