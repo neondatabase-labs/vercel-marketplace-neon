@@ -5,7 +5,6 @@ import Link from "next/link";
 import arrow from "@/assets/arrow.svg";
 import discord from "@/assets/discord.svg";
 import docs from "@/assets/docs.svg";
-import theme from "@/assets/theme.svg";
 
 const DATA = {
   title: "Next-Gen Templates<br> with Neon & Vercel",
@@ -89,39 +88,25 @@ export default function Home() {
             </Link>
           </div>
         </main>
-        <footer className="flex items-center justify-between border-t border-[#E4E5E7] py-5 md:pb-12 md:pt-10 dark:border-[#303236]">
-          <div className="flex items-center gap-2.5 text-sm leading-none tracking-tight">
-            <Image
-              className="dark:invert"
-              src={theme}
-              alt="theme"
-              width={16}
-              height={16}
-              priority
-            />
-            <span className="dark:hidden">Light</span>
-            <span className="hidden dark:block">Dark</span>
-          </div>
-          <div className="flex gap-6">
-            {DATA.footerLinks.map((link) => (
-              <Link
-                className="flex items-center gap-2 opacity-70 transition-opacity duration-200 hover:opacity-100"
-                key={link.text}
-                href={link.href}
-                target="_blank"
-              >
-                <Image
-                  className="dark:invert"
-                  src={link.icon}
-                  alt={link.text}
-                  width={16}
-                  height={16}
-                  priority
-                />
-                <span className="text-sm tracking-tight">{link.text}</span>
-              </Link>
-            ))}
-          </div>
+        <footer className="flex items-center gap-6 border-t border-[#E4E5E7] py-5 md:pb-12 md:pt-10 dark:border-[#303236]">
+          {DATA.footerLinks.map((link) => (
+            <Link
+              className="flex items-center gap-2 opacity-70 transition-opacity duration-200 hover:opacity-100"
+              key={link.text}
+              href={link.href}
+              target="_blank"
+            >
+              <Image
+                className="dark:invert"
+                src={link.icon}
+                alt={link.text}
+                width={16}
+                height={16}
+                priority
+              />
+              <span className="text-sm tracking-tight">{link.text}</span>
+            </Link>
+          ))}
         </footer>
       </div>
     </div>
