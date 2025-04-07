@@ -36,7 +36,7 @@ cp .env.example .env
 
 #### Get your database URL
 
-Obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://pg.new).
+Obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://console.neon.tech/).
 
 #### Add the database URL to the .env file
 
