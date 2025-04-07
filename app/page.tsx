@@ -5,13 +5,14 @@ import Link from "next/link";
 import arrow from "@/assets/arrow.svg";
 import discord from "@/assets/discord.svg";
 import docs from "@/assets/docs.svg";
+import { checkDbConnection } from "./db";
 
 const DATA = {
   title: "Next-Gen Templates<br> with Neon & Vercel",
   description:
     "Pre-built, optimized, and deployment-ready in minutes. Fast&#8209;track your app development with Neon and Vercel.",
   button: {
-    text: "Create Neon Database",
+    text: "Deploy to Vercel",
     href: "https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fneondatabase-labs%2Fvercel-marketplace-neon%2Ftree%2Fmain&project-name=my-vercel-neon-app&repository-name=my-vercel-neon-app&products=[{%22type%22:%22integration%22,%22integrationSlug%22:%22neon%22,%22productSlug%22:%22neon%22,%22protocol%22:%22storage%22}]",
   },
   link: {
@@ -32,7 +33,8 @@ const DATA = {
   ],
 };
 
-export default function Home() {
+export default async function Home() {
+  const result = await checkDbConnection(); 
   return (
     <div className="flex min-h-screen flex-col">
       <div className="mx-auto flex w-full max-w-md flex-1 flex-col px-5 md:max-w-lg md:px-0 lg:max-w-xl">
@@ -86,6 +88,18 @@ export default function Home() {
                 priority
               />
             </Link>
+          </div>
+          <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#61646B] dark:text-[#94979E]">
+            <span>Database connection status:</span>
+            <span
+              className={`rounded-full px-3 py-1.5 text-xs font-semibold ${
+                result === "Database connection successful"
+                  ? "bg-[#00E599] text-[#0C0D0D]"
+                  : "bg-red-500 text-white"
+              }`}
+            >
+              {result}
+            </span>
           </div>
         </main>
         <footer className="flex items-center gap-6 border-t border-[#E4E5E7] py-5 md:pb-12 md:pt-10 dark:border-[#303236]">
