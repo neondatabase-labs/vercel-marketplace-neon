@@ -2,20 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply relative min-w-[320px] min-h-screen antialiased;
+  @apply bg-white text-[#0C0D0D] dark:bg-black dark:text-white;
+  -webkit-tap-highlight-color: transparent;
 }
