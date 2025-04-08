@@ -34,7 +34,7 @@ const DATA = {
 };
 
 export default async function Home() {
-  const result = await checkDbConnection(); 
+  const result = await checkDbConnection();
   return (
     <div className="flex min-h-screen flex-col">
       <div className="mx-auto flex w-full max-w-md flex-1 flex-col px-5 md:max-w-lg md:px-0 lg:max-w-xl">
@@ -89,38 +89,37 @@ export default async function Home() {
               />
             </Link>
           </div>
-          <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#61646B] dark:text-[#94979E]">
-            <span>Database connection status:</span>
-            <span
-              className={`rounded-full px-3 py-1.5 text-xs font-semibold ${
-                result === "Database connection successful"
-                  ? "bg-[#00E599] text-[#0C0D0D]"
-                  : "bg-red-500 text-white"
-              }`}
-            >
-              {result}
-            </span>
-          </div>
         </main>
-        <footer className="flex items-center gap-6 border-t border-[#E4E5E7] py-5 md:pb-12 md:pt-10 dark:border-[#303236]">
-          {DATA.footerLinks.map((link) => (
-            <Link
-              className="flex items-center gap-2 opacity-70 transition-opacity duration-200 hover:opacity-100"
-              key={link.text}
-              href={link.href}
-              target="_blank"
-            >
-              <Image
-                className="dark:invert"
-                src={link.icon}
-                alt={link.text}
-                width={16}
-                height={16}
-                priority
-              />
-              <span className="text-sm tracking-tight">{link.text}</span>
-            </Link>
-          ))}
+        <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-[#E4E5E7] py-5 sm:gap-2 sm:gap-6 md:pb-12 md:pt-10 dark:border-[#303236]">
+          <ul className="flex items-center gap-4 sm:gap-6">
+            {DATA.footerLinks.map((link) => (
+              <Link
+                className="flex items-center gap-2 opacity-70 transition-opacity duration-200 hover:opacity-100"
+                key={link.text}
+                href={link.href}
+                target="_blank"
+              >
+                <Image
+                  className="dark:invert"
+                  src={link.icon}
+                  alt={link.text}
+                  width={16}
+                  height={16}
+                  priority
+                />
+                <span className="text-sm tracking-tight">{link.text}</span>
+              </Link>
+            ))}
+          </ul>
+          <span
+            className={`rounded-full border px-3 py-1.5 text-xs font-semibold ${
+              result === "Database connected"
+                ? "border-[#00E599]/20 bg-[#00E599]/10 text-[#1a8c66] dark:bg-[#00E599]/10 dark:text-[#00E599]"
+                : "border-red-500/20 bg-red-500/10 text-red-500 dark:text-red-500"
+            }`}
+          >
+            {result}
+          </span>
         </footer>
       </div>
     </div>
