@@ -1,4 +1,4 @@
-![Vercel with Neon](./assets/home-v2.png)
+![Vercel with Neon](./assets/home.png)
 
 -> View demo: [vercel-marketplace-neon.vercel.app](https://vercel-marketplace-neon.vercel.app/)
 
