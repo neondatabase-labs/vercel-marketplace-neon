@@ -7,32 +7,6 @@ import discord from "@/assets/discord.svg";
 import docs from "@/assets/docs.svg";
 import { checkDbConnection } from "./db";
 
-const DATA = {
-  title: "Vercel with Neon Postgres",
-  description:
-    "A minimal template for building full-stack React applications using Next.js, Vercel, and Neon.",
-  button: {
-    text: "Deploy to Vercel",
-    href: "https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fneondatabase-labs%2Fvercel-marketplace-neon%2Ftree%2Fmain&project-name=my-vercel-neon-app&repository-name=my-vercel-neon-app&products=[{%22type%22:%22integration%22,%22integrationSlug%22:%22neon%22,%22productSlug%22:%22neon%22,%22protocol%22:%22storage%22}]",
-  },
-  link: {
-    text: "View on GitHub",
-    href: "https://github.com/neondatabase-labs/vercel-marketplace-neon",
-  },
-  footerLinks: [
-    {
-      text: "Docs",
-      href: "https://neon.tech/docs/",
-      icon: docs,
-    },
-    {
-      text: "Discord",
-      href: "https://discord.com/invite/92vNTzKDGp",
-      icon: discord,
-    },
-  ],
-};
-
 export default async function Home() {
   const result = await checkDbConnection();
   return (
@@ -57,28 +31,27 @@ export default async function Home() {
               priority
             />
           </div>
-          <h1
-            className="text-3xl font-semibold leading-none tracking-tighter md:text-4xl md:leading-none lg:text-5xl lg:leading-none"
-            dangerouslySetInnerHTML={{ __html: DATA.title }}
-          />
-          <p
-            className="mt-3.5 max-w-lg text-base leading-snug tracking-tight text-[#61646B] md:text-lg md:leading-snug lg:text-xl lg:leading-snug dark:text-[#94979E]"
-            dangerouslySetInnerHTML={{ __html: DATA.description }}
-          />
+          <h1 className="text-3xl font-semibold leading-none tracking-tighter md:text-4xl md:leading-none lg:text-5xl lg:leading-none">
+            Vercel with Neon Postgres
+          </h1>
+          <p className="mt-3.5 max-w-lg text-base leading-snug tracking-tight text-[#61646B] md:text-lg md:leading-snug lg:text-xl lg:leading-snug dark:text-[#94979E]">
+            A minimal template for building full-stack React applications using
+            Next.js, Vercel, and Neon.
+          </p>
           <div className="mt-8 flex flex-wrap items-center gap-5 md:mt-9 lg:mt-10">
             <Link
               className="rounded-full bg-[#00E599] px-5 py-2.5 font-semibold tracking-tight text-[#0C0D0D] transition-colors duration-200 hover:bg-[#00E5BF] lg:px-7 lg:py-3"
-              href={DATA.button.href}
+              href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fneondatabase-labs%2Fvercel-marketplace-neon%2Ftree%2Fmain&project-name=my-vercel-neon-app&repository-name=my-vercel-neon-app&products=[{%22type%22:%22integration%22,%22integrationSlug%22:%22neon%22,%22productSlug%22:%22neon%22,%22protocol%22:%22storage%22}]"
               target="_blank"
             >
-              {DATA.button.text}
+              Deploy to Vercel
             </Link>
             <Link
               className="group flex items-center gap-2 leading-none tracking-tight"
-              href={DATA.link.href}
+              href="https://github.com/neondatabase-labs/vercel-marketplace-neon"
               target="_blank"
             >
-              {DATA.link.text}
+              View on GitHub
               <Image
                 className="transition-transform duration-200 group-hover:translate-x-1 dark:invert"
                 src={arrow}
@@ -92,7 +65,18 @@ export default async function Home() {
         </main>
         <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-[#E4E5E7] py-5 sm:gap-2 sm:gap-6 md:pb-12 md:pt-10 dark:border-[#303236]">
           <ul className="flex items-center gap-4 sm:gap-6">
-            {DATA.footerLinks.map((link) => (
+            {[
+              {
+                text: "Docs",
+                href: "https://neon.tech/docs/",
+                icon: docs,
+              },
+              {
+                text: "Discord",
+                href: "https://discord.com/invite/92vNTzKDGp",
+                icon: discord,
+              },
+            ].map((link) => (
               <Link
                 className="flex items-center gap-2 opacity-70 transition-opacity duration-200 hover:opacity-100"
                 key={link.text}

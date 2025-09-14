@@ -73,8 +73,3 @@ To learn more about Next.js, take a look at the following resources:
 ## Deploy on Vercel
 
 Commit and push your code changes to your GitHub repository to automatically trigger a new deployment.
-
-
-
-
-
