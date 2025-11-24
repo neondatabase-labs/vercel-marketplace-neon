@@ -36,11 +36,9 @@ cp .env.example .env
 
 #### Get your database URL
 
-Obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://console.neon.tech/). Alternatively, you can run `vercel env pull` to fetch the environment variables from your Vercel project.
+Run `vercel env pull` to fetch the environment variables from your Vercel project.
 
-#### Add the database URL to the .env file
-
-Update the `.env` file with your database connection string:
+Alternatively, obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://console.neon.tech/). Next, update the `.env` file with your database connection string:
 
 ```txt
 # The connection string has the format `postgres://user:pass@host/db`
@@ -56,6 +54,14 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+#### Neon MCP Server
+
+```
+npx neonctl@latest init
+```
+
+The init command installs the Neon MCP (Model Context Protocol) server and authenticates it to Neon using a Neon API key.
 
 ## Learn More
 
