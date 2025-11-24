@@ -1,4 +1,4 @@
-![Vercel with Neon](./assets/home.png)
+![Vercel with Neon](./docs/home.png)
 
 -> View demo: [vercel-marketplace-neon.vercel.app](https://vercel-marketplace-neon.vercel.app/)
 
@@ -36,7 +36,7 @@ cp .env.example .env
 
 #### Get your database URL
 
-Obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://console.neon.tech/).
+Obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://console.neon.tech/). Alternatively, you can run `vercel env pull` to fetch the environment variables from your Vercel project.
 
 #### Add the database URL to the .env file
 
@@ -61,6 +61,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 To learn more about Neon, check out the Neon documentation:
 
+- [Neon on Vercel Fluid Compute](https://neon.com/docs/guides/vercel-connection-methods) - learn about differnet datatabase connection methods on Fluid.
 - [Neon Documentation](https://neon.tech/docs/introduction) - learn about Neon's features and SDKs.
 - [Neon Discord](https://discord.gg/9kf3G4yUZk) - join the Neon Discord server to ask questions and join the community.
 - [ORM Integrations](https://neon.tech/docs/get-started-with-neon/orms) - find Object-Relational Mappers (ORMs) that work with Neon.

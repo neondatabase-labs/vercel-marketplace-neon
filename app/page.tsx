@@ -1,10 +1,5 @@
 import Image from "next/image";
-import logo from "@/assets/logo.svg";
-import logoDark from "@/assets/logo-dark.svg";
 import Link from "next/link";
-import arrow from "@/assets/arrow.svg";
-import discord from "@/assets/discord.svg";
-import docs from "@/assets/docs.svg";
 import { checkDbConnection } from "./db";
 
 export default async function Home() {
@@ -16,7 +11,7 @@ export default async function Home() {
           <div className="mb-6 md:mb-7">
             <Image
               className="lg:h-7 lg:w-auto dark:hidden"
-              src={logo}
+              src="/logo.svg"
               alt="Neon logo"
               width={88}
               height={24}
@@ -24,7 +19,7 @@ export default async function Home() {
             />
             <Image
               className="hidden lg:h-7 lg:w-auto dark:block"
-              src={logoDark}
+              src="/logo-dark.svg"
               alt="Neon logo"
               width={88}
               height={24}
@@ -54,7 +49,7 @@ export default async function Home() {
               View on GitHub
               <Image
                 className="transition-transform duration-200 group-hover:translate-x-1 dark:invert"
-                src={arrow}
+                src="/arrow.svg"
                 alt="arrow"
                 width={16}
                 height={10}
@@ -69,12 +64,12 @@ export default async function Home() {
               {
                 text: "Docs",
                 href: "https://neon.tech/docs/",
-                icon: docs,
+                icon: "/docs.svg",
               },
               {
                 text: "Discord",
                 href: "https://discord.com/invite/92vNTzKDGp",
-                icon: discord,
+                icon: "/discord.svg",
               },
             ].map((link) => (
               <Link
