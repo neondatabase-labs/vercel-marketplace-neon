@@ -38,11 +38,10 @@ cp .env.example .env
 
 Run `vercel env pull` to fetch the environment variables from your Vercel project.
 
-Alternatively, obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://console.neon.tech/). Next, update the `.env` file with your database connection string:
+Alternatively, obtain the database connection string from the Connection Details widget on the [Neon Dashboard](https://console.neon.tech/) and add it to the `.env` file:
 
 ```txt
-# The connection string has the format `postgres://user:pass@host/db`
-DATABASE_URL=<your-string-here>
+DATABASE_URL=<postgres://user:pass@host/db>
 ```
 
 #### Start the development server
